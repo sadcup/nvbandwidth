@@ -50,6 +50,7 @@ bool Testcase::filterHasAccessiblePeerPairs() {
 }
 
 bool Testcase::filterSupportsMulticast() {
+#if __CUDACC_VER_MAJOR__ >= 12
     int deviceCount = 0;
     CU_ASSERT(cuDeviceGetCount(&deviceCount));
 
@@ -65,6 +66,9 @@ bool Testcase::filterSupportsMulticast() {
     }
 
     return true;
+#else
+    return false;
+#endif
 }
 
 #ifdef MULTINODE

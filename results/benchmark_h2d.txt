@@ -1,0 +1,44 @@
+nvbandwidth Version: v0.8
+Built from Git version: 66746a3
+
+CUDA Runtime Version: 12020
+CUDA Driver Version: 12020
+Driver Version: 535.247.01
+
+4329ebc474e0
+Device 0: Tesla T4 (00000000:3b:00)
+Device 1: Tesla T4 (00000000:86:00)
+Device 2: Tesla T4 (00000000:af:00)
+Device 3: Tesla T4 (00000000:d8:00)
+
+Running host_to_device_memcpy_ce.
+memcpy CE CPU(row) -> GPU(column) bandwidth (GB/s)
+           0         1         2         3
+ 0     12.35     12.34     12.30     12.33
+
+SUM host_to_device_memcpy_ce 49.32
+
+Running host_to_device_bidirectional_memcpy_ce.
+memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)
+           0         1         2         3
+ 0     11.15     11.56     11.67     11.66
+
+SUM host_to_device_bidirectional_memcpy_ce 46.04
+
+Running host_to_device_memcpy_sm.
+memcpy SM CPU(row) -> GPU(column) bandwidth (GB/s)
+           0         1         2         3
+ 0     12.35     12.34     12.30     12.34
+
+SUM host_to_device_memcpy_sm 49.33
+
+Running host_to_device_bidirectional_memcpy_sm.
+memcpy SM CPU(row) <-> GPU(column) bandwidth (GB/s)
+           0         1         2         3
+ 0     11.33     11.33     11.33     11.33
+
+SUM host_to_device_bidirectional_memcpy_sm 45.32
+
+NOTE: The reported results may not reflect the full capabilities of the platform.
+Performance can vary with software drivers, hardware clocks, and system topology.
+

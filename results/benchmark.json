@@ -1,0 +1,80 @@
+{
+	"nvbandwidth" : 
+	{
+		"CUDA Runtime Version" : 12020,
+		"Driver Version" : "535.247.01",
+		"GPU Device list" : 
+		[
+			"0: Tesla T4 (00000000:3b:00): (4329ebc474e0)",
+			"1: Tesla T4 (00000000:86:00): (4329ebc474e0)",
+			"2: Tesla T4 (00000000:af:00): (4329ebc474e0)",
+			"3: Tesla T4 (00000000:d8:00): (4329ebc474e0)"
+		],
+		"git_version" : "66746a3",
+		"testcases" : 
+		[
+			{
+				"bandwidth_description" : "memcpy CE CPU(row) -> GPU(column) bandwidth (GB/s)",
+				"bandwidth_matrix" : 
+				[
+					[
+						"12.3527",
+						"12.3366",
+						"12.2982",
+						"12.3331"
+					]
+				],
+				"name" : "host_to_device_memcpy_ce",
+				"status" : "Passed",
+				"sum" : 49.320728004000003
+			},
+			{
+				"bandwidth_description" : "memcpy CE CPU(row) <-> GPU(column) bandwidth (GB/s)",
+				"bandwidth_matrix" : 
+				[
+					[
+						"11.0702",
+						"11.2355",
+						"11.0818",
+						"11.1709"
+					]
+				],
+				"name" : "host_to_device_bidirectional_memcpy_ce",
+				"status" : "Passed",
+				"sum" : 44.558465592000005
+			},
+			{
+				"bandwidth_description" : "memcpy SM CPU(row) -> GPU(column) bandwidth (GB/s)",
+				"bandwidth_matrix" : 
+				[
+					[
+						"12.3531",
+						"12.3362",
+						"12.3001",
+						"12.3342"
+					]
+				],
+				"name" : "host_to_device_memcpy_sm",
+				"status" : "Passed",
+				"sum" : 49.323564263000002
+			},
+			{
+				"bandwidth_description" : "memcpy SM CPU(row) <-> GPU(column) bandwidth (GB/s)",
+				"bandwidth_matrix" : 
+				[
+					[
+						"11.3312",
+						"11.3311",
+						"11.331",
+						"11.3311"
+					]
+				],
+				"name" : "host_to_device_bidirectional_memcpy_sm",
+				"status" : "Passed",
+				"sum" : 45.32447727600001
+			}
+		],
+		"version" : "v0.8"
+	}
+}
+
